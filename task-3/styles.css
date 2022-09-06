@@ -1,0 +1,124 @@
+/* start css reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* end css reset */
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  background: hsla(0, 0%, 11%, 1);
+}
+
+.container {
+  width: 600px;
+  height: 700px;
+  background: hsla(215, 28%, 17%, 1);
+  color: hsla(0, 0%, 100%, 1);
+}
+
+.input {
+  height: 40%;
+  background: hsla(252, 100%, 63%, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+input {
+  width: 120px;
+  height: 70px;
+  background: none;
+  border: 2px solid hsla(256, 100%, 79%, 1);
+  border-radius: 5px;
+  color: hsla(0, 0%, 100%, 1);
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  width: 120px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsla(0, 0%, 100%, 1);
+  color: hsl(0, 0%, 24%);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsla(0, 0%, 95%);
+}
+
+.output {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+section {
+  height: 100px;
+  width: 90%;
+  background-color: hsla(215, 30%, 22%, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h2 {
+  color: hsla(250, 100%, 88%, 1);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}

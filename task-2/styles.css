@@ -1,0 +1,121 @@
+/* start css reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* end css reset */
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  background: hsla(0, 0%, 11%, 1);
+}
+
+.container {
+  padding: 0 50px;
+  width: 600px;
+  height: 600px;
+  background: hsla(215, 28%, 17%, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h1 {
+  line-height: 3rem;
+  font-weight: bold;
+  font-size: 3rem;
+  color: hsla(144, 70%, 58%, 1);
+  margin-bottom: 15px;
+}
+
+h1 span {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+p {
+  color: hsla(255, 5%, 84%, 1);
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+}
+
+button {
+  width: 300px;
+  cursor: pointer;
+  padding: 15px 10px;
+  font-size: 1.5rem;
+  background: hsla(160, 84%, 39%, 1);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border: none;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  height: 3px;
+  background: hsla(215, 28%, 25%, 1);
+  margin: 30px 0;
+}
+
+button:hover {
+  color: hsla(160, 84%, 39%, 1);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.password button {
+  width: 240px;
+  height: 50px;
+  background: hsla(215, 30%, 22%, 1);
+  color: hsla(160, 84%, 39%, 1);
+}
+
+.password button:hover {
+  opacity: 0.5;
+}
