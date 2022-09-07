@@ -35,10 +35,7 @@ function updateRenderImage() {
   const hideImageEl = document.getElementById(hideImageIndex);
   const showImageEl = document.getElementById(showImageIndex);
 
-  hideImageEl.classList.remove("show");
-  hideImageEl.classList.add("hide");
-
-  showImageEl.classList.remove("hide");
+  hideImageEl.removeAttribute("class");
   showImageEl.classList.add("show");
 }
 
@@ -51,8 +48,6 @@ function renderImage() {
 
     if (index == showImageIndex) {
       imgEl.classList.add("show");
-    } else {
-      imgEl.classList.add("hide");
     }
 
     imagesEl.appendChild(imgEl);

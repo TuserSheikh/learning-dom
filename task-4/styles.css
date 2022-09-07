@@ -15,11 +15,8 @@ img {
   width: 100%;
   object-fit: cover;
   position: absolute;
-  /* animation: now 0.5s; */
-}
-
-.hide {
   display: none;
+  /* animation: now 0.5s; */
 }
 
 .show {
