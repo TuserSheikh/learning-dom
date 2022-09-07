@@ -68,6 +68,12 @@ function renderImage() {
       btnEl.classList.add("active");
     }
 
+    btnEl.addEventListener("click", function () {
+      hideIndex = showIndex;
+      showIndex = index;
+      updateRenderImage();
+    });
+
     buttonsEl.appendChild(btnEl);
   }
 }

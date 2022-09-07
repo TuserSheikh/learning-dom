@@ -5,8 +5,8 @@ body {
 }
 
 .container {
-  width: 900px;
-  height: 450px;
+  width: 1000px;
+  height: 550px;
   position: relative;
 }
 
@@ -58,6 +58,7 @@ img {
   background-color: white;
   opacity: 0.3;
   border: none;
+  cursor: pointer;
 }
 
 #controll-all .active {
