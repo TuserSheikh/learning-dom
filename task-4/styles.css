@@ -41,7 +41,7 @@ img {
   cursor: pointer;
 }
 
-.controll-all {
+#controll-all {
   height: 30px;
   width: 100%;
   position: absolute;
@@ -52,15 +52,15 @@ img {
   gap: 20px;
 }
 
-.controll-all button {
+#controll-all button {
   width: 15px;
-  height: 15px;
+  height: 15px !important;
   background-color: white;
   opacity: 0.3;
   border: none;
 }
 
-.controll-all .active {
+#controll-all .active {
   opacity: 0.7;
 }
 

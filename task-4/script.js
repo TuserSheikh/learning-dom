@@ -9,47 +9,65 @@ const images = [
   { src: "images/the_room_of_hidden_things.jpg", alt: "The room of hidden things" },
 ];
 
-const imagesEl = document.getElementById("images");
-
-let hideImageIndex = null;
-let showImageIndex = 0;
-let lastImageIndex = images.length - 1;
+let hideIndex = null;
+let showIndex = 0;
+let lastIndex = images.length - 1;
 
 renderImage();
 
 // next button
 document.getElementById("next").addEventListener("click", function () {
-  hideImageIndex = showImageIndex;
-  showImageIndex = showImageIndex === lastImageIndex ? 0 : showImageIndex + 1;
+  hideIndex = showIndex;
+  showIndex = showIndex === lastIndex ? 0 : showIndex + 1;
   updateRenderImage();
 });
 
 // prev button
 document.getElementById("prev").addEventListener("click", function () {
-  hideImageIndex = showImageIndex;
-  showImageIndex = showImageIndex === 0 ? lastImageIndex : showImageIndex - 1;
+  hideIndex = showIndex;
+  showIndex = showIndex === 0 ? lastIndex : showIndex - 1;
   updateRenderImage();
 });
 
 function updateRenderImage() {
-  const hideImageEl = document.getElementById(hideImageIndex);
-  const showImageEl = document.getElementById(showImageIndex);
+  const hideImageEl = document.getElementById(hideIndex);
+  const showImageEl = document.getElementById(showIndex);
+
+  const inactiveButtonEl = document.getElementById(hideIndex + images.length);
+  const activeButtonEl = document.getElementById(showIndex + images.length);
 
   hideImageEl.removeAttribute("class");
   showImageEl.classList.add("show");
+
+  inactiveButtonEl.removeAttribute("class");
+  activeButtonEl.classList.add("active");
 }
 
 function renderImage() {
+  const imagesEl = document.getElementById("images");
+  const buttonsEl = document.getElementById("controll-all");
+
   for (let [index, image] of images.entries()) {
+    // images
     let imgEl = document.createElement("img");
     imgEl.src = image.src;
     imgEl.alt = image.alt;
     imgEl.id = index;
 
-    if (index == showImageIndex) {
+    if (index == showIndex) {
       imgEl.classList.add("show");
     }
 
     imagesEl.appendChild(imgEl);
+
+    // buttons
+    let btnEl = document.createElement("button");
+    btnEl.id = index + images.length;
+
+    if (index + images.length === showIndex + images.length) {
+      btnEl.classList.add("active");
+    }
+
+    buttonsEl.appendChild(btnEl);
   }
 }
