@@ -13,23 +13,30 @@ let hideIndex = null;
 let showIndex = 0;
 let lastIndex = images.length - 1;
 
-renderImage();
+render();
 
-// next button
-document.getElementById("next").addEventListener("click", function () {
-  hideIndex = showIndex;
-  showIndex = showIndex === lastIndex ? 0 : showIndex + 1;
-  updateRenderImage();
-});
+document.getElementById("prev").addEventListener("click", prev);
+document.getElementById("next").addEventListener("click", next);
 
-// prev button
-document.getElementById("prev").addEventListener("click", function () {
+let interval = setInterval(next, 3000);
+
+function prev() {
   hideIndex = showIndex;
   showIndex = showIndex === 0 ? lastIndex : showIndex - 1;
-  updateRenderImage();
-});
 
-function updateRenderImage() {
+  restartInterval();
+  updateRender();
+}
+
+function next() {
+  hideIndex = showIndex;
+  showIndex = showIndex === lastIndex ? 0 : showIndex + 1;
+
+  restartInterval();
+  updateRender();
+}
+
+function updateRender() {
   const hideImageEl = document.getElementById(hideIndex);
   const showImageEl = document.getElementById(showIndex);
 
@@ -43,7 +50,7 @@ function updateRenderImage() {
   activeButtonEl.classList.add("active");
 }
 
-function renderImage() {
+function render() {
   const imagesEl = document.getElementById("images");
   const buttonsEl = document.getElementById("controll-all");
 
@@ -71,9 +78,15 @@ function renderImage() {
     btnEl.addEventListener("click", function () {
       hideIndex = showIndex;
       showIndex = index;
-      updateRenderImage();
+      restartInterval();
+      updateRender();
     });
 
     buttonsEl.appendChild(btnEl);
   }
+}
+
+function restartInterval() {
+  clearInterval(interval);
+  interval = setInterval(next, 3000);
 }
