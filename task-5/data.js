@@ -56,3 +56,5 @@ const dogs = [
     hasBeenLiked: false,
   },
 ];
+
+export { dogs };

@@ -6,3 +6,4 @@
 - [Task 2 "Random Password Generator"](https://tusersheikh.github.io/learning-dom/task-2/)
 - [Task 3 "Unit Conversion"](https://tusersheikh.github.io/learning-dom/task-3/)
 - [Task 4 "Slider"](https://tusersheikh.github.io/learning-dom/task-4/)
+- [Task 5 "Tinder for Dog"](https://tusersheikh.github.io/learning-dom/task-5/)

@@ -13,16 +13,8 @@ body {
 
 .container {
   width: 375px;
-  border: 3px solid gray;
+  border: 5px solid gray;
   border-radius: 15px;
-}
-
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
 }
 
 /* start header */
@@ -74,6 +66,11 @@ header div.paw img {
   position: absolute;
   top: 50px;
   left: 15px;
+  display: none;
+}
+
+.dog .feedback.show {
+  display: block;
 }
 
 .dog-info {
