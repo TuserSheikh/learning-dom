@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 375px;
+  border: 3px solid gray;
+  border-radius: 15px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* start header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  padding: 0 15px;
+}
+
+header div {
+  display: grid;
+  place-items: center;
+}
+
+header div.paw {
+  background: linear-gradient(270deg, #fa695a 0%, #f83375 100%);
+  padding: 7px 20px;
+
+  border-radius: 25px;
+}
+
+header div img {
+  width: 28px;
+  height: 28px;
+}
+
+header div.paw img {
+  width: 14px;
+  height: 14px;
+}
+
+/* start main */
+
+.dog {
+  background-image: url(images/dog-black.jpg);
+  background-size: cover;
+  height: 500px;
+  border-radius: 10px;
+  margin: 0 3px;
+  position: relative;
+}
+
+.dog .feedback {
+  transform: rotate(-30deg);
+  width: 200px;
+  position: absolute;
+  top: 50px;
+  left: 15px;
+}
+
+.dog-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.dog h1 {
+  color: #f8f8f8;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.dog p {
+  color: #f8f8f8;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* end main */
+
+/* start footer */
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div {
+  height: 65px;
+  width: 65px;
+  margin: 0 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 20px #e9e9ea;
+  cursor: pointer;
+}
+
+footer div.nope:hover {
+  background-color: #ffe7ef;
+}
+
+footer div.like:hover {
+  background-color: #dbfff4;
+}
+
+footer div img {
+  width: 32px;
+  height: 32px;
+}
+
+/* end footer */
