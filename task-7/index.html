@@ -8,7 +8,7 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
 
     <!-- custom css -->
     <link rel="stylesheet" href="style.css" />
@@ -17,121 +17,21 @@
   </head>
   <body>
     <div class="container">
-      <h1>How can we help you?</h1>
-      <h2>Browse help topics</h2>
-      <div class="faq">
-        <div>
-          <h3 class="question">Fix a problem</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">Troubleshoot problems playing videos</a></li>
-              <li><a href="#">Troubleshoot account issues</a></li>
-              <li><a href="#">Fix upload problems</a></li>
-              <li><a href="#">Fix YouTube Premium membership issues</a></li>
-              <li><a href="#">Get help with the YouTube Partner Programme</a></li>
-            </ul>
-          </div>
+      <header>
+        <h1>How can we help you?</h1>
+        <div class="search">
+          <input id="search-input" type="text" placeholder="Describe your issue" />
+          <img class="img-search" src="images/search.svg" />
+          <img class="img-cross hide" id="img-cross" src="images/cross.svg" />
         </div>
-        <div>
-          <h3 class="question">Watch videos</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">Find videos to watch</a></li>
-              <li><a href="#">Change video settings</a></li>
-              <li><a href="#">Watch videos on different devices</a></li>
-              <li><a href="#">Comment, subscribe and connect with creators</a></li>
-              <li><a href="#">Save or share videos and playlists</a></li>
-              <li><a href="#">Troubleshoot problems playing videos</a></li>
-              <li><a href="#">Purchase movies, TV shows and products on YouTube</a></li>
-            </ul>
-          </div>
-        </div>
+      </header>
 
-        <div>
-          <h3 class="question">Manage your account and settings</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">Sign up and manage your account</a></li>
-              <li><a href="#">Manage account settings</a></li>
-              <li><a href="#">Manage privacy settings</a></li>
-              <li><a href="#">Manage accessibility settings</a></li>
-              <li><a href="#">Troubleshoot account issues</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3 class="question">Supervised experience on YouTube</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">Understand your choices as a family</a></li>
-              <li><a href="#">What is a supervised experience on YouTube?</a></li>
-              <li><a href="#">Get started with supervised accounts</a></li>
-              <li><a href="#">Set content settings for supervised experiences</a></li>
-              <li><a href="#">FAQ for parents about supervised accounts</a></li>
-              <li><a href="#">Info for creators about supervised experiences on YouTube</a></li>
-              <li><a href="#">For children and families: What's a paid product placement?</a></li>
-              <li><a href="#">Watching videos with paid product placements, sponsorships and endorsements</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3 class="question">YouTube Premium</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">Learn about YouTube Premium benefits</a></li>
-              <li><a href="#">Join YouTube Premium</a></li>
-              <li><a href="#">Manage your Premium membership</a></li>
-              <li><a href="#">Manage Premium billing</a></li>
-              <li><a href="#">Fix YouTube Premium membership issues</a></li>
-              <li><a href="#">Troubleshoot billing and charge issues</a></li>
-              <li><a href="#">Request a refund for YouTube paid products</a></li>
-              <li><a href="#">YouTube Premium updates and promotions</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3 class="question">Create and grow your channel</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">Upload videos</a></li>
-              <li><a href="#">Edit videos and video settings</a></li>
-              <li><a href="#">Create Shorts</a></li>
-              <li><a href="#">Customise and manage your channel</a></li>
-              <li><a href="#">Analyse performance with analytics</a></li>
-              <li><a href="#">Translate videos and captions</a></li>
-              <li><a href="#">Manage your community and comments</a></li>
-              <li><a href="#">Live stream on YouTube </a></li>
-              <li><a href="#">Join the YouTube Shorts creator community</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3 class="question">Monetise with the YouTube Partner Programme</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">YouTube Partner Programme</a></li>
-              <li><a href="#">Make money on YouTube</a></li>
-              <li><a href="#">Get paid</a></li>
-              <li><a href="#">Understand ads and related policies</a></li>
-              <li><a href="#">Get help with the YouTube Partner Programme</a></li>
-              <li><a href="#">YouTube for Content Managers</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3 class="question">Policy, safety and copyright</h3>
-          <div class="answer">
-            <ul>
-              <li><a href="#">Coronavirus disease 2019 (COVID-19) updates</a></li>
-              <li><a href="#">YouTube's Community Guidelines</a></li>
-              <li><a href="#">YouTube policies</a></li>
-              <li><a href="#">Reporting and enforcement</a></li>
-              <li><a href="#">Privacy and safety centre</a></li>
-              <li><a href="#">Copyright and rights management</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <main>
+        <h2>Browse help topics</h2>
+        <div class="faq" id="faq"></div>
+      </main>
     </div>
+
+    <script src="app.js" type="module"></script>
   </body>
 </html>

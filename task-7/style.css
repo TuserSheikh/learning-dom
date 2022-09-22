@@ -1,8 +1,151 @@
-body {
-  font-family: "Poppins", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1,
 h2,
 h3 {
   font-weight: 500;
+}
+
+img {
+  width: 18px;
+  height: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* header */
+
+header {
+  text-align: center;
+  margin: 100px 0 150px;
+}
+
+h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.search {
+  position: relative;
+}
+
+.search img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search .img-search {
+  left: 40px;
+}
+
+.search .img-cross {
+  right: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+input {
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  border: 0;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  padding: 0 70px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px 0, rgba(9, 30, 66, 0.08) 0px 0px 2px 2px;
+}
+
+/* end header */
+
+/* start faq */
+main {
+  width: 900px;
+}
+
+main h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+main .faq {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+main .faq .faq-item:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+main .faq .faq-item:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+main .faq .faq-item {
+  padding: 15px 70px;
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+main .faq .faq-item:hover,
+main .faq .faq-item:focus {
+  background-color: #efefef;
+}
+
+main .faq .faq-item.open:hover,
+main .faq .faq-item.open:focus {
+  background-color: #fff;
+}
+
+main .faq .faq-item:last-child {
+  border-bottom: 0;
+}
+
+main h3 {
+  font-size: 1rem;
+}
+
+main .faq .faq-item .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .faq .faq-item .question img {
+  transition: 0.5s;
+}
+
+main .faq .faq-item.open .question img {
+  rotate: 180deg;
+  transition: 0.5s;
+}
+
+.answer {
+  display: none;
 }
