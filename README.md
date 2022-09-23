@@ -8,3 +8,4 @@
 - [Task 4 "Slider"](https://tusersheikh.github.io/learning-dom/task-4/)
 - [Task 5 "Tinder for Dog"](https://tusersheikh.github.io/learning-dom/task-5/)
 - [Task 6 "Color Scheme Generator"](https://tusersheikh.github.io/learning-dom/task-6/)
+- [Task 7 "FAQ page"](https://tusersheikh.github.io/learning-dom/task-7/)

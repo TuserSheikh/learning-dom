@@ -149,13 +149,22 @@ main .faq .faq-item:last-child .links {
 }
 
 main .faq .faq-item .links {
-  background-color: #d8e4f7;
-  display: none;
+  clip: rect(auto, auto, 0, auto);
+  position: absolute;
+  margin: -1rem 0;
+  padding: 0.5rem;
+
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  transition-property: clip;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 main .faq .faq-item .links.show {
-  display: block;
-  padding: 10px 0;
+  clip: rect(auto, auto, 10rem, auto);
 }
 
 main .faq .faq-item .links .link {
