@@ -86,7 +86,7 @@ const faqs = [
   },
 
   {
-    question: "Manage your account and settings",
+    question: "Supervised experience on YouTube",
     links: [
       {
         text: "Learn about YouTube Premium benefits",

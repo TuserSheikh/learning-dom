@@ -23,6 +23,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 /* header */
@@ -132,6 +133,8 @@ main .faq .faq-item .question {
 
 main .faq .faq-item .question img {
   /* transition: 0.3s; */
+  width: 14px;
+  height: 14px;
 }
 
 main .faq .faq-item.open .question img {
@@ -141,14 +144,18 @@ main .faq .faq-item.open .question img {
 
 /* links */
 
+main .faq .faq-item:last-child .links {
+  border-radius: 0 0 10px 10px;
+}
+
 main .faq .faq-item .links {
   background-color: #d8e4f7;
   display: none;
-  padding: 10px 0;
 }
 
 main .faq .faq-item .links.show {
   display: block;
+  padding: 10px 0;
 }
 
 main .faq .faq-item .links .link {

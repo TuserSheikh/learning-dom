@@ -77,9 +77,22 @@ for (let i = 0; i < data.length; i++) {
       this.classList.remove("open");
       linkEl.classList.remove("show");
     } else {
+      closeAllFaq();
       linkEl.classList.add("show");
       data[i].isOpen = true;
       this.classList.add("open");
     }
   });
+}
+
+function closeAllFaq() {
+  for (let i = 0; i < data.length; i++) {
+    let linkEl = faqItemEl[i].lastElementChild;
+
+    if (data[i].isOpen) {
+      data[i].isOpen = false;
+      faqItemEl[i].classList.remove("open");
+      linkEl.classList.remove("show");
+    }
+  }
 }
