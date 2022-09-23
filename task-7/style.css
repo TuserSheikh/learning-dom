@@ -132,14 +132,12 @@ main .faq .faq-item .question {
 }
 
 main .faq .faq-item .question img {
-  /* transition: 0.3s; */
   width: 14px;
   height: 14px;
 }
 
 main .faq .faq-item.open .question img {
   rotate: 180deg;
-  /* transition: 0.3s; */
 }
 
 /* links */
@@ -149,22 +147,13 @@ main .faq .faq-item:last-child .links {
 }
 
 main .faq .faq-item .links {
-  clip: rect(auto, auto, 0, auto);
-  position: absolute;
-  margin: -1rem 0;
-  padding: 0.5rem;
-
-  color: white;
-
-  background-color: rgba(0, 0, 0, 0.8);
-
-  transition-property: clip;
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #d8e4f7;
+  display: none;
 }
 
 main .faq .faq-item .links.show {
-  clip: rect(auto, auto, 10rem, auto);
+  display: block;
+  padding: 10px 0;
 }
 
 main .faq .faq-item .links .link {
