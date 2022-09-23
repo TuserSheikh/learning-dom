@@ -29,11 +29,13 @@ function render() {
   for (let faq of data) {
     let faqItemEl = document.createElement("div");
     let questionEl = document.createElement("div");
+    let linksEl = document.createElement("div");
     let h3El = document.createElement("h3");
     let imgEl = document.createElement("img");
 
     faqItemEl.classList.add("faq-item");
 
+    // question
     questionEl.classList.add("question");
 
     h3El.textContent = faq.question;
@@ -43,22 +45,41 @@ function render() {
     questionEl.appendChild(h3El);
     questionEl.appendChild(imgEl);
 
-    faqItemEl.appendChild(questionEl);
+    // links
+    linksEl.classList.add("links");
 
+    for (let link of faq.links) {
+      let linkDivEl = document.createElement("div");
+      let linkAEl = document.createElement("a");
+
+      linkDivEl.classList.add("link");
+
+      linkAEl.textContent = link.text;
+      linkAEl.href = link.link;
+
+      linkDivEl.appendChild(linkAEl);
+      linksEl.appendChild(linkDivEl);
+    }
+
+    // add to dom
+    faqItemEl.appendChild(questionEl);
+    faqItemEl.appendChild(linksEl);
     faqEl.appendChild(faqItemEl);
   }
 }
 
 for (let i = 0; i < data.length; i++) {
   faqItemEl[i].addEventListener("click", function () {
+    const linkEl = this.lastElementChild;
+
     if (data[i].isOpen) {
       data[i].isOpen = false;
       this.classList.remove("open");
+      linkEl.classList.remove("show");
     } else {
+      linkEl.classList.add("show");
       data[i].isOpen = true;
       this.classList.add("open");
     }
-
-    console.log(data[i]);
   });
 }
