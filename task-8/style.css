@@ -5,6 +5,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: lightblue;
 }
 
 .container {
@@ -38,6 +39,8 @@ header a {
 
 main {
   position: relative;
+  background-color: #fff;
+  min-height: calc(100vh - 250px);
 }
 
 main .search {
@@ -84,4 +87,24 @@ main .search button {
   border-left: 1px solid hsl(0, 0%, 83%);
   background-color: hsl(0, 0%, 95%);
   cursor: pointer;
+}
+
+/*  end main search */
+
+/* start main search-result */
+
+main .search-result .placeholder {
+  color: hsl(0, 0%, 60%);
+  text-align: center;
+  margin-top: 250px;
+}
+
+main .search-result .placeholder img {
+  width: 100px;
+  height: 100px;
+}
+
+main .search-result .placeholder p {
+  font-weight: 600;
+  margin-top: 5px;
 }
