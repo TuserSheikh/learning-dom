@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 920px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+  background-color: hsl(0, 0%, 60%);
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+header h1 {
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+}
+
+header a {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+main {
+  position: relative;
+}
+
+main .search {
+  width: 60%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  top: -20px;
+}
+
+main .search input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 0 150px 0 50px;
+  font-size: 1rem;
+}
+
+main .search input:focus {
+  outline: none;
+  box-shadow: hsla(0, 0%, 39%, 0.2) 0px 2px 8px 0px;
+}
+
+main .search img {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  fill: green;
+  left: 20px;
+}
+
+main .search button {
+  position: absolute;
+  right: 0;
+  border: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  width: 120px;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  border-left: 1px solid hsl(0, 0%, 83%);
+  background-color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
