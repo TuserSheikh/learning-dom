@@ -167,6 +167,14 @@ main .search-result .movie .details .info {
   padding-bottom: 10px;
 }
 
+main .search-result .movie .details .info .runtime {
+  width: 80px;
+}
+
+main .search-result .movie .details .info .genre {
+  padding: 0 10px;
+}
+
 main .search-result .movie .details .info .watchlist button {
   border: none;
   background-color: #fff;
