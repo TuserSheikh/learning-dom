@@ -3,10 +3,9 @@ const inputEl = document.getElementById("input");
 const searchResultEl = document.getElementById("search-result");
 const btnWatchlistEl = document.getElementsByClassName("btn-watchlist");
 
-btnSearchEl.addEventListener("click", searchMovie);
-
 let movies = [];
 
+btnSearchEl.addEventListener("click", searchMovie);
 async function searchMovie() {
   const movieName = inputEl.value;
   const responseAllMovies = await fetch("https://www.omdbapi.com/?apikey=800a17ec&type=movie&s=" + movieName);
@@ -38,11 +37,12 @@ async function searchMovie() {
 
 function render() {
   let searchResultHtml = "";
-  let localStorageWatchlistIds = JSON.parse(localStorage.getItem("movies")).map((m) => m.id);
+  let localStorageWatchlist = JSON.parse(localStorage.getItem("movies"));
 
-  movies = movies.map((m) => (localStorageWatchlistIds.includes(m.id) ? { ...m, isWatchList: true } : m));
-
-  console.log(movies);
+  if (localStorageWatchlist && localStorageWatchlist.length) {
+    let localStorageWatchlistIds = localStorageWatchlist.map((m) => m.id);
+    movies = movies.map((m) => (localStorageWatchlistIds.includes(m.id) ? { ...m, isWatchList: true } : m));
+  }
 
   for (let movie of movies)
     searchResultHtml += `
@@ -98,20 +98,22 @@ function renderMovieNotFound() {
 function enableWatchlistBtn() {
   for (let i = 0; i < movies.length; i++) {
     btnWatchlistEl[i].addEventListener("click", function () {
-      if (movies[i].isWatchList) {
-        // movies[i].isWatchList = false;
-      } else {
-        let watchlistMovies = [movies[i]];
-        let localStorageWatchlist = JSON.parse(localStorage.getItem("movies"));
+      let localStorageWatchlist = JSON.parse(localStorage.getItem("movies"));
+      let watchlistMovies = [];
 
+      if (movies[i].isWatchList) {
+        let movieId = movies[i].id;
+        watchlistMovies = localStorageWatchlist.filter((m) => m.id !== movieId);
+        movies[i].isWatchList = false;
+      } else {
+        watchlistMovies = [movies[i]];
         if (localStorageWatchlist) {
           watchlistMovies = [...watchlistMovies, ...localStorageWatchlist];
         }
-
-        localStorage.setItem("movies", JSON.stringify(watchlistMovies));
         movies[i].isWatchList = true;
       }
 
+      localStorage.setItem("movies", JSON.stringify(watchlistMovies));
       render();
     });
   }
