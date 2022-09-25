@@ -35,6 +35,14 @@ header a {
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 700;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+header a:hover {
+  color: black;
+  background-color: white;
 }
 
 main {
@@ -199,4 +207,12 @@ main .search-result .movie .details .info .watchlist button:hover {
 
 main .search-result .movie .details .plot {
   color: gray;
+}
+
+main .search-result .movie-not-found {
+  color: hsl(0, 0%, 60%);
+  text-align: center;
+  margin-top: 250px;
+  font-weight: 600;
+  font-size: 1.2rem;
 }

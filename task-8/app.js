@@ -7,13 +7,19 @@ btnSearchEl.addEventListener("click", searchMovie);
 let movies = [];
 
 async function searchMovie() {
-  movies = [];
-
   const movieName = inputEl.value;
   const responseAllMovies = await fetch("https://www.omdbapi.com/?apikey=800a17ec&type=movie&s=" + movieName);
   const allMovies = await responseAllMovies.json();
 
+  movies = [];
+
+  if (allMovies.Response == "False") {
+    return renderMovieNotFound();
+  }
+
+  console.log("allMovies");
   console.log(allMovies);
+  console.log("allMovies");
 
   for (let movie of allMovies.Search) {
     const responseMovie = await fetch("https://www.omdbapi.com/?apikey=800a17ec&i=" + movie.imdbID);
@@ -68,4 +74,12 @@ function render() {
   `;
 
   searchResultEl.innerHTML = searchResultHtml;
+}
+
+function renderMovieNotFound() {
+  searchResultEl.innerHTML = `
+    <div class="movie-not-found">
+      <p>Unable to find what you're looking for. Please try another search.</p>
+    </div>
+  `;
 }
