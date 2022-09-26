@@ -7,6 +7,7 @@ let movies = [];
 
 btnSearchEl.addEventListener("click", searchMovie);
 async function searchMovie() {
+  renderMovieSearcing();
   const movieName = inputEl.value;
   const responseAllMovies = await fetch("https://www.omdbapi.com/?apikey=800a17ec&type=movie&s=" + movieName);
   const allMovies = await responseAllMovies.json();
@@ -32,6 +33,7 @@ async function searchMovie() {
       isWatchList: false,
     });
   }
+
   return render();
 }
 
@@ -91,6 +93,14 @@ function renderMovieNotFound() {
   searchResultEl.innerHTML = `
     <div class="movie-not-found">
       <p>Unable to find what you're looking for. Please try another search.</p>
+    </div>
+  `;
+}
+
+function renderMovieSearcing() {
+  searchResultEl.innerHTML = `
+    <div class="movie-searcing">
+      <p>searching...</p>
     </div>
   `;
 }

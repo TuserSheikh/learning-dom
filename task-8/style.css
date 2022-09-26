@@ -246,3 +246,11 @@ main .search-result .watchlist-not-found a img {
   height: 15px;
   margin-right: 5px;
 }
+
+main .search-result .movie-searcing {
+  color: hsl(0, 0%, 60%);
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
