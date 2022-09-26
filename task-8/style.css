@@ -216,3 +216,33 @@ main .search-result .movie-not-found {
   font-weight: 600;
   font-size: 1.2rem;
 }
+
+main .search-result .watchlist-not-found {
+  text-align: center;
+  margin-top: 250px;
+}
+
+main .search-result .watchlist-not-found p {
+  color: hsl(0, 0%, 60%);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main .search-result .watchlist-not-found a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+main .search-result .watchlist-not-found a:hover {
+  text-decoration: underline;
+}
+
+main .search-result .watchlist-not-found a img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
