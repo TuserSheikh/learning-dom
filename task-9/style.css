@@ -1,0 +1,103 @@
+:root {
+  --primary-color: #003c96;
+  --primary-background: #d7edff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primary-color);
+}
+
+.container {
+  /* padding: 0 15px; */
+}
+
+/* Start Typography */
+a {
+  color: var(--primary-color);
+  border-bottom: 1px solid transparent;
+}
+
+/* End Typography */
+
+/* start header section */
+header {
+  background-color: var(--primary-background);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 5;
+}
+
+header .logo svg:hover path {
+  cursor: pointer;
+  fill: #007cff;
+}
+
+header .logo a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  min-width: min-content;
+}
+
+header .logo a:hover {
+  color: #007cff;
+  border-color: inherit;
+}
+
+header .menu {
+  width: 100%;
+  order: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+header .menu a {
+  text-decoration: none;
+}
+
+header .menu a:hover {
+  color: #007cff;
+  border-color: inherit;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+}
+
+header .search .search-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+header .search .menu-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* end head section */
+
+@media (min-width: 500px) {
+  header .menu {
+    width: unset;
+    order: unset;
+  }
+}
